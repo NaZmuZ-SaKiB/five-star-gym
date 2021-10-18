@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Cardio Training",
+        "description": "You do not need a lot of equipment for cardiovascular exercise. Instead, you can take part in cardio training at home by working their own body weight. The American College of Sports Medicine recommend people engage in 150–300 minutes of moderate physical activity a week. You can choose the exercises that suit their current fitness level. You could also move on to more difficult movements over time as their fitness improves.",
+        "price": 15,
+        "image": "cardio.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Personal Training",
+        "description": "If you are just starting out with an exercise program or you aren't seeing results with your current routine, a personal trainer might be able to help. You can weigh the possible benefits and expenses to decide if it's a good choice for you.People work with trainers for many reasons. Whether you want to develop an individualized program to support weight loss goals, get in shape, or simply feel that you'd benefit from the additional accountability, a personal trainer can be a great resource.",
+        "price": 20,
+        "image": "personal.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Weight Lifting",
+        "description": "Building and maintaining muscle is necessary for all of us, especially as we age. And the earlier we start, the better. According to the American Council on Exercise, most adults lose nearly a half pound of muscle per year starting around age 30, mostly because they aren’t as active as they were when they were younger. Losing muscle at the same time that metabolism starts to slow down is a recipe for weight gain and the health issues that can accompany it.",
+        "price": 18,
+        "image": "lifting.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Bootcamp",
+        "description": "The solution is here: fast, long-lasting weight loss results and the healthy lifestyle you need to keep them! Here, women and men of all fitness levels experience the head-turning body transformations they desire with our high intensity interval training group workouts fitness boot camp. The key to your fat loss success is our signature Afterburn workouts, support and motivation from our world class coaches, and easy to follow nutrition program to help you keep the fat off. Visit your local Fit Body Boot Camp today and see the difference for yourself!",
+        "price": 27,
+        "image": "bootcamp.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Yoga Training",
+        "description": "Yoga is a mind and body practice. Various styles of yoga combine physical postures, breathing techniques, and meditation or relaxation. Yoga is an ancient practice that may have originated in India. It involves movement, meditation, and breathing techniques to promote mental and physical well-being.",
+        "price": 12,
+        "image": "yoga.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Weight Lose",
+        "description": "It’s natural for anyone trying to lose weight to want to lose it very quickly. But people who lose weight gradually and steadily (about 1 to 2 pounds per week) are more successful at keeping weight off. Healthy weight loss isn’t just about a “diet” or “program”. It’s about an ongoing lifestyle that includes long-term changes in daily eating and exercise habits.",
+        "price": 23,
+        "image": "weightlose.jpg"
+    }
+]
