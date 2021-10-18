@@ -1,0 +1,90 @@
+.nav-container{
+    position: static;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgb(37, 37, 37, .3);
+    z-index: 100;
+}
+
+.nav{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__brand{
+    height: 40px;
+}
+
+.nav__phone{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav__phone .icon{
+    color: #252525;
+    margin-right: 10px;
+}
+
+.nav__links a{
+    display: inline-block;
+    text-decoration: none;
+    color: #252525;
+    padding: 10px;
+    margin: 0 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav__links a:hover{
+    border-color: rgb(234, 0, 255);
+}
+
+.nav__links a.active{
+    border-color: rgb(234, 0, 255);
+}
+
+.nav__menu-toggle{
+    display: none;
+}
+
+@media only screen and (max-width: 1250px){
+    .nav{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .nav__phone{
+        order: 3;
+        padding-bottom: 15px;
+    }
+
+    .nav__links{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav__menu-toggle{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+
+    }
+
+    .nav__links.hide,
+    .nav__phone.hide{
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+}
