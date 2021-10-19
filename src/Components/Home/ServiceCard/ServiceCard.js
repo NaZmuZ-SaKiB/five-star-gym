@@ -12,7 +12,8 @@ const Service = ({ service }) => {
             <div className="info">
                 <div className="title">{title}</div>
                 <div className="description">{description.substr(0, 100)}...</div>
-                <Link to={`/service/${id}`}>Show more <i class="fas fa-angle-double-right"></i></Link>
+                <p className="price">${price}/<span>month</span></p>
+                <Link to={`/service/${id}`}>Show more <i className="fas fa-angle-double-right"></i></Link>
             </div>
         </div>
     );

@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from './Header/Header';
 import ServiceCard from './ServiceCard/ServiceCard';
 
+import useServices from '../../Hooks/useServices';
 import './Home.css';
 
 const Home = () => {
-    const [services, setServices] = useState([]);
+    const [services] = useServices();
 
-    useEffect(() => {
-        fetch('./service.data.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
     return (
         <>
             <Header />
