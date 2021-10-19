@@ -9,6 +9,7 @@ import './Authentications.css';
 const Authentications = () => {
     const [newUser, setNewUser] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('')
 
     const { register, watch, handleSubmit, formState: { errors }, reset } = useForm();
     const { signup, login, googleSignIn, updateName } = useAuthManager();
@@ -31,6 +32,7 @@ const Authentications = () => {
                 .then(() => {
                     updateName(name)
                         .then(() => {
+                            setError('');
                             reset();
                             localStorage.setItem('user', true);
                             setLoading(false);
@@ -38,16 +40,19 @@ const Authentications = () => {
                             window.location.reload();
                         })
                 })
+                .catch(err => setError(err.message));
         }
 
         else {
             login(email, password)
                 .then(() => {
+                    setError('');
                     reset();
                     localStorage.setItem('user', true);
                     setLoading(false);
                     history.push(from);
                 })
+                .catch(err => setError(err.message));
         }
     }
 
@@ -68,6 +73,7 @@ const Authentications = () => {
             <img src={Logo} alt="logo" className="form-container__logo" />
             <h1>{newUser ? 'Sign up' : 'Log in'}</h1>
             <form onSubmit={handleSubmit(onsubmit)} className="form-container__form">
+                <p style={{ color: 'red' }}>{error && error}</p>
                 {
                     newUser && <>
                         <input
