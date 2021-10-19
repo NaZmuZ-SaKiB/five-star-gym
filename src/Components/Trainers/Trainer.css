@@ -1,0 +1,117 @@
+.trainers-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.trainers-container h1{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.trainers-container .trainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.trainers-container .trainer .photo{
+    width: 100%;
+}
+
+.trainers-container .trainer .photo img{
+    width: 400px;
+}
+
+.trainers-container .trainer:nth-of-type(even) .photo{
+    order: 2;
+}
+
+.trainers-container .trainer:nth-of-type(odd) .info{
+    margin-left: auto;
+    text-align: right;
+}
+
+.trainers-container .trainer:nth-of-type(even) .photo img{
+    display: block;
+    margin-left: auto;
+}
+
+.trainers-container .trainer .name{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.trainers-container .trainer .students{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.trainers-container .trainer .follow{
+    padding: 10px 30px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+@media only screen and (max-width: 1250px) {
+    .trainers-container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .trainers-container .trainer{
+        grid-template-columns: 1fr;
+    }
+
+    .trainers-container .trainer .photo{
+        margin-bottom: 10px;
+    }
+
+    .trainers-container .trainer .photo img{
+        margin: 0 auto;
+    }
+
+    .trainers-container .trainer:nth-of-type(even) .photo{
+        order: 0;
+    }
+
+    .trainers-container .trainer:nth-of-type(odd) .photo img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .trainers-container .trainer .info{
+        text-align: center;
+    }
+
+    .trainers-container .trainer:nth-of-type(odd) .info{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .trainers-container h1{
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .trainers-container .trainer .name{
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .trainers-container .trainer .photo img{
+        width: 90%;
+    }
+}
