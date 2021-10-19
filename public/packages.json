@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Starter",
+        "price": 28,
+        "classes": [
+            "Weight lifting",
+            "Cardio Training"
+        ]
+    },
+    {
+        "title": "Clasic",
+        "price": 55,
+        "classes": [
+            "Yoga",
+            "Cardio Training",
+            "Weight Lose"
+        ]
+    },
+    {
+        "title": "Pro",
+        "price": 75,
+        "classes": [
+            "Weight lifting",
+            "Cardio Training",
+            "Personal Training",
+            "Yoga"
+        ]
+    }
+]

@@ -9,6 +9,10 @@ import Home from "./Components/Home/Home";
 import Nav from './Components/Nav/Nav';
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Service from "./Components/Service/Service";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Appoinment from "./Components/Appoinment/Appoinment";
+import Enroll from "./Components/Enroll/Enroll";
+import Trainer from "./Components/Trainers/Trainer";
 
 const App = () => {
   const [context, setContext] = useContext(Context);
@@ -36,7 +40,16 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/home' component={Home} />
-        <Route exact path='/service/:id' component={Service} />
+        <PrivateRoute exact path='/service/:id'>
+          <Service />
+        </PrivateRoute>
+        <PrivateRoute exact path='/appoinment'>
+          <Appoinment />
+        </PrivateRoute>
+        <PrivateRoute exact path='/enroll'>
+          <Enroll />
+        </PrivateRoute>
+        <Route exact path='/trainers' component={Trainer} />
         <Route exact path='/login' component={Authentications} />
         <Route exact path='/signup' component={Authentications} />
         <Route exact path='/*' component={PageNotFound} />

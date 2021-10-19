@@ -1,0 +1,30 @@
+.review{
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review img{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.review .name{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.review .description{
+    margin-bottom: 15px;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.review .rating{
+    color: goldenrod;
+}

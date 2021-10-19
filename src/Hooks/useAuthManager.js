@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, updateProfile } from 'firebase/auth';
+import { getAuth, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, updateProfile } from 'firebase/auth';
 
 import initializeFirebase from '../Firebase/firebase';
 
@@ -25,7 +25,10 @@ const useAuthManager = () => {
         return signInWithPopup(auth, new GoogleAuthProvider())
     }
 
-    const logout = () => signOut(auth);
+    const logout = () => {
+        signOut(auth)
+            .then(() => localStorage.setItem('user', false))
+    };
 
     return { signup, login, logout, googleSignIn, updateName }
 };

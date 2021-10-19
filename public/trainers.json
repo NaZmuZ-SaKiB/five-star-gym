@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "students": 6759,
+        "rating": 5,
+        "instructor": "Emily Elizabeth",
+        "photo": "https://www.wellintra.com/wp-content/uploads/2019/03/top-yoga-teacher-profiles-in-india-570x570.jpg",
+    },
+    {
+        "id": 2,
+        "students": 2466,
+        "rating": 5,
+        "instructor": "Mr. Robin",
+        "photo": "https://production-next-images-cdn.thumbtack.com/i/349317315095945238/desktop/standard/400square-legacy",
+    },
+    {
+        "id": 3,
+        "students": 2754,
+        "rating": 5,
+        "instructor": "Elina Wilson",
+        "photo": "https://www.wellintra.com/wp-content/uploads/2019/03/Female-Yoga-South-Mumbai-Cuffe-Parade-570x570.jpg",
+    },
+    {
+        "id": 4,
+        "students": 4673,
+        "rating": 5,
+        "price": 18,
+        "instructor": "Ashley Fletcher",
+        "photo": "https://www.wellintra.com/wp-content/uploads/2019/03/Female-Personal-Yoga-trainer-Bandra-570x570.jpg",
+    },
+    {
+        "id": 5,
+        "students": 3587,
+        "rating": 5,
+        "price": 22,
+        "instructor": "Ana Jameson",
+        "photo": "https://www.wellintra.com/wp-content/uploads/2020/01/female-yoga-instructors-Lokhandwala-Andheri-West-Versova-570x570.jpg",
+    },
+    {
+        "id": 6,
+        "students": 1547,
+        "rating": 5,
+        "price": 20,
+        "instructor": "Iris Johnson",
+        "photo": "https://www.wellintra.com/wp-content/uploads/2020/01/pretty-female-personal-yoga-trainer-bandra-570x570.jpg",
+    }
+]

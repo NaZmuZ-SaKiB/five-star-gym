@@ -1,0 +1,11 @@
+.form-container.appoinment{
+    margin-bottom: 40px;
+}
+
+.form-container.appoinment .form-container__form{
+    margin-bottom: 25px;
+}
+
+.message{
+    text-align: center;
+}

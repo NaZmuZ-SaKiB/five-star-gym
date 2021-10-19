@@ -22,8 +22,9 @@ const Nav = () => {
                 </div>
                 <div onClick={() => setHideMenu(!hideMenu)} className={`nav__links ${hideMenu ? 'hide' : ''}`}>
                     <NavLink to='/home' >Home</NavLink>
-                    <NavLink to='/shop' >Shop</NavLink>
+                    <NavLink to='/trainers' >Trainers</NavLink>
                     <NavLink to='/enroll' >Enroll</NavLink>
+                    <NavLink to='/appoinment' >Appoinment</NavLink>
                     {!context.user && <NavLink to='/login' >Login</NavLink>}
                     {!context.user && <NavLink to='/signup' >Sign up</NavLink>}
                     {context.user && <a onClick={logout}>{context.user.displayName && context.user.displayName.split(' ')[0]} <i className="fas fa-sign-out-alt"></i></a>}

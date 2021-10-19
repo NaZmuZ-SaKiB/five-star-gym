@@ -1,0 +1,26 @@
+[
+    {
+        "name": "David Joseph",
+        "photo": "user1.jpeg",
+        "message": "I like five star gym because they have very professional trainers and all of them are hard working. They are very helpful. I reccomend every one five star gym",
+        "star": 4
+    },
+    {
+        "name": "Pria Shen",
+        "photo": "user2.jpg",
+        "message": "Yoga in five star gym is amazing. It helped me so much to be healthy. It made my life full of refreshment. Thanks to their great yoga teachers.",
+        "star": 5
+    },
+    {
+        "name": "Ben Smith",
+        "photo": "user3.jpg",
+        "message": "Personal Training of five star gym is awsome. And the trainers are very friendly and professional. Pleased to have classses from five star gym.",
+        "star": 4
+    },
+    {
+        "name": "Elezabeth Kyler",
+        "photo": "user4.jpg",
+        "message": "I am very happy. I have lost 10kg in 1 month from five star gym. I folloed there diet and exercises and now I have my results. Nice job you guys",
+        "star": 5
+    }
+]

@@ -37,7 +37,8 @@
     }
 }
 
-.form-container__form input{
+.form-container__form input,
+.form-container__form select{
     width: 100%;
     padding: 20px 15px;
     background-color: rgb(241, 238, 238);

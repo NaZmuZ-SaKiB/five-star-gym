@@ -1,22 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-import useServices from '../../Hooks/useServices';
 import Logo from '../../Images/logo-white.png';
 import { Context } from '../ContextProvider/ContextProvider';
 import './Footer.css';
 
 const Footer = () => {
-    const [services] = useServices();
+    const [services, setServices] = useState([]);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const [context] = useContext(Context);
 
+    useEffect(() => {
+        fetch('./service.data.json')
+            .then(res => res.json())
+            .then(data => setServices(data));
+    }, [])
+
     // functions
 
     const onSubmit = data => {
-        console.log(data)
         reset();
     }
 
@@ -57,7 +61,6 @@ const Footer = () => {
                     <p className="title">Contact</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input
-                            defaultValue={context.user ? context.user.displayName : ''}
                             placeholder="Name"
                             style={{ borderColor: `${errors.name ? 'red' : ''}` }}
                             {...register(
@@ -71,7 +74,6 @@ const Footer = () => {
                         <p className="form-container__form__error">{errors.name?.message}&nbsp;</p>
 
                         <input
-                            defaultValue={context.user ? context.user.email : ''}
                             placeholder="Email"
                             style={{ borderColor: `${errors.email ? 'red' : ''}` }}
                             {...register(
@@ -84,7 +86,7 @@ const Footer = () => {
                         />
                         <p className="form-container__form__error">{errors.email?.message}&nbsp;</p>
 
-                        <textarea placeholder="Your Message"></textarea>
+                        <textarea required placeholder="Your Message"></textarea>
 
                         <button type="submit">Send Message</button>
                     </form>

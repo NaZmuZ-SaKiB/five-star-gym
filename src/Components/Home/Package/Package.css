@@ -1,0 +1,60 @@
+.package{
+    width: 280px;
+    margin: 0 auto;
+    background-image: linear-gradient(to top,#dca6ac , #615c9f);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+
+.package h2{
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center
+}
+
+.package ul{
+    list-style: none;
+    margin: 15px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.package ul li:first-child{
+    font-size: 20px;
+}
+
+.package ul li{
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+}
+
+.package .price{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.package .price span{
+    font-size: 20px;
+}
+
+.package button{
+    display: block;
+    font-weight: bold;
+    font-family: inherit;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+.package button:hover{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+}

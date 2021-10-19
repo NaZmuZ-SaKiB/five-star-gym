@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import useServices from '../../Hooks/useServices';
 
 import './Service.css';
 
 const Service = () => {
     const { id } = useParams();
-    const [services] = useServices();
+    const [services, setServices] = useState([]);
     const [service, setService] = useState({});
 
     useEffect(() => {
+        fetch('../service.data.json')
+            .then(res => res.json())
+            .then(data => setServices(data));
+    }, [])
+
+    useEffect(() => {
         services.length > 0 && setService(services.find(item => item.id === parseInt(id)))
-    }, [services, id])
+    }, [id, services])
+
+    console.log(services)
 
 
     return (
