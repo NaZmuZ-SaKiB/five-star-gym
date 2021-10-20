@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import useAuthManager from '../../Hooks/useAuthManager';
 
 import Logo from '../../Images/logo-black.png';
@@ -12,6 +12,17 @@ const Nav = () => {
     const [context] = useContext(Context);
 
     const { logout } = useAuthManager();
+
+    const history = useHistory();
+
+    const handleLogout = () => {
+        logout()
+            .then(() => {
+                localStorage.setItem('user', false);
+                history.push('/')
+            })
+
+    }
 
     return (
         <div className="nav-container">
@@ -27,7 +38,7 @@ const Nav = () => {
                     <NavLink to='/appoinment' >Appoinment</NavLink>
                     {!context && <NavLink to='/login' >Login</NavLink>}
                     {!context && <NavLink to='/signup' >Sign up</NavLink>}
-                    {context && <a onClick={logout}>{context.displayName && context.displayName.split(' ')[0]} <i className="fas fa-sign-out-alt"></i></a>}
+                    {context && <a onClick={handleLogout}>{context.displayName && context.displayName.split(' ')[0]} <i className="fas fa-sign-out-alt"></i></a>}
                 </div>
             </nav>
             <div onClick={() => setHideMenu(!hideMenu)} className="nav__menu-toggle">

@@ -26,8 +26,7 @@ const useAuthManager = () => {
     }
 
     const logout = () => {
-        signOut(auth)
-            .then(() => localStorage.setItem('user', false))
+        return signOut(auth)
     };
 
     return { signup, login, logout, googleSignIn, updateName }
