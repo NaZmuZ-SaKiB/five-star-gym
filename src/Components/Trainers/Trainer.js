@@ -11,8 +11,6 @@ const Trainer = () => {
             .then(data => setTrainers(data))
     }, [])
 
-    console.log(trainers)
-
     return (
         <div className="trainers-container">
             <h1>Your Trainers</h1>

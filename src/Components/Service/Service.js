@@ -18,9 +18,6 @@ const Service = () => {
         services.length > 0 && setService(services.find(item => item.id === parseInt(id)))
     }, [id, services])
 
-    console.log(services)
-
-
     return (
         <>
             {
