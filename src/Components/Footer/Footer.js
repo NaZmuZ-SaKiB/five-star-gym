@@ -1,16 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../Images/logo-white.png';
-import { Context } from '../ContextProvider/ContextProvider';
 import './Footer.css';
 
 const Footer = () => {
     const [services, setServices] = useState([]);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-
-    const [context] = useContext(Context);
 
     useEffect(() => {
         fetch('./service.data.json')

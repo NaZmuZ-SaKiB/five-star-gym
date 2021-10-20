@@ -14,7 +14,7 @@ const Appoinment = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        setMessage(`Appointment set for ${context.user.displayName} on ${date} at ${time}`);
+        setMessage(`Appointment set for ${context?.displayName} on ${date} at ${time}`);
         setDate('');
         setTime('');
     }
@@ -26,7 +26,7 @@ const Appoinment = () => {
             <form onSubmit={handleSubmit} className="form-container__form">
 
                 <input
-                    value={context.user?.displayName}
+                    value={context?.displayName}
                     readOnly
                     style={{ marginBottom: '15px' }}
                 />

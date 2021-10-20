@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-    const [context, setContext] = useState({ user: null, cart: [] })
+    const [context, setContext] = useState(null)
 
     return (
         <Context.Provider value={[context, setContext]}>

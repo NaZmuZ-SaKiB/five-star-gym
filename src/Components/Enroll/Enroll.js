@@ -32,7 +32,7 @@ const Enroll = () => {
         console.log(course)
         if (course === 'select' || !course) { setMessage("please select your course") }
         else {
-            setMessage(`Enrolment complete for ${context.user?.displayName} in ${course}`);
+            setMessage(`Enrolment complete for ${context?.displayName} in ${course}`);
             setTimeout(() => {
                 history.push('/home')
             }, 3000);
@@ -45,13 +45,13 @@ const Enroll = () => {
             <h1>Enroll</h1>
             <form onSubmit={handleSubmit} className="form-container__form">
                 <input
-                    value={context.user?.displayName && context.user.displayName}
+                    value={context?.displayName && context?.displayName}
                     readOnly
                 />
                 <p className="form-container__form__error">&nbsp;</p>
 
                 <input
-                    value={context.user?.email && context.user.email}
+                    value={context?.email && context?.email}
                     readOnly
                 />
                 <p className="form-container__form__error">&nbsp;</p>

@@ -20,16 +20,10 @@ const App = () => {
   useEffect(() => {
     onAuthStateChanged(getAuth(), user => {
       if (user) {
-        setContext({
-          ...context,
-          user: user
-        })
+        setContext(user)
       }
       else {
-        setContext({
-          ...context,
-          user: null
-        })
+        setContext(null)
       }
     })
   }, [])

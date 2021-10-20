@@ -25,9 +25,9 @@ const Nav = () => {
                     <NavLink to='/trainers' >Trainers</NavLink>
                     <NavLink to='/enroll' >Enroll</NavLink>
                     <NavLink to='/appoinment' >Appoinment</NavLink>
-                    {!context.user && <NavLink to='/login' >Login</NavLink>}
-                    {!context.user && <NavLink to='/signup' >Sign up</NavLink>}
-                    {context.user && <a onClick={logout}>{context.user.displayName && context.user.displayName.split(' ')[0]} <i className="fas fa-sign-out-alt"></i></a>}
+                    {!context && <NavLink to='/login' >Login</NavLink>}
+                    {!context && <NavLink to='/signup' >Sign up</NavLink>}
+                    {context && <a onClick={logout}>{context.displayName && context.displayName.split(' ')[0]} <i className="fas fa-sign-out-alt"></i></a>}
                 </div>
             </nav>
             <div onClick={() => setHideMenu(!hideMenu)} className="nav__menu-toggle">
